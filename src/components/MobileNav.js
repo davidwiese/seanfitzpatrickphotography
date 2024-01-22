@@ -3,6 +3,7 @@ import { IoMdClose } from "react-icons/io";
 import { CgMenuRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ImInstagram } from "react-icons/im";
 
 // menu variants
 const menuVariants = {
@@ -64,6 +65,15 @@ const MobileNav = () => {
 						<Link onClick={() => setOpenMenu(false)} to="/contact">
 							Contact
 						</Link>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/seanyfitzpics/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<ImInstagram />
+						</a>
 					</li>
 				</ul>
 			</motion.div>
