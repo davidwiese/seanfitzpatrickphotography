@@ -17,7 +17,13 @@ const Home = () => {
 				{/* text & img wrapper */}
 				<div className="flex flex-col justify-center">
 					{/* text */}
-					<div className="w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start">
+					<motion.div
+						initial={{ opacity: 0, y: "-50%" }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: "-50%" }}
+						transition={transition1}
+						className="w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start"
+					>
 						<h1 className="h1">
 							Photographer <br />
 							Portrait & Concert
@@ -28,7 +34,7 @@ const Home = () => {
 						<Link to={"/contact"} className="btn mb-[30px]">
 							HIRE ME
 						</Link>
-					</div>
+					</motion.div>
 					{/* img */}
 					<div className="flex justify-end max-h-96 lg:max-h-max">
 						<div className="relative lg:-right-40 overflow-hidden">
