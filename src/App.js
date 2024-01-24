@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { CursorContext } from "./context/CursorContext";
 
 const App = () => {
-	console.log(useContext(CursorContext));
+	const { cursorVariants } = useContext(CursorContext);
 	return (
 		<>
 			<Router>
@@ -14,7 +14,11 @@ const App = () => {
 				<AnimRoutes />
 			</Router>
 			{/* cursor */}
-			<div className="w-[32px] h-[32px] bg-primary fixed top-0 left-0 pointer-events-none z-50"></div>
+			<motion.div
+				variants={cursorVariants}
+				animate={"default"}
+				className="w-[32px] h-[32px] bg-primary fixed top-0 left-0 pointer-events-none z-50 rounded-full"
+			></motion.div>
 		</>
 	);
 };
