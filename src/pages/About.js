@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import WomanImg from "../img/about/woman.png";
+import ManImg from "../img/about/man.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
@@ -25,7 +25,7 @@ const About = () => {
 				<div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16">
 					{/* image */}
 					<div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
-						<img src={WomanImg} alt="" />
+						<img src={ManImg} alt="" />
 					</div>
 					{/* text */}
 					<motion.div

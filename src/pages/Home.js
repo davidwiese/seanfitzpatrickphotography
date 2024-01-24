@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import WomanImg from "../img/home/woman.png";
+import ManImg from "../img/home/man.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
@@ -49,9 +49,11 @@ const Home = () => {
 							className="relative lg:-right-40 overflow-hidden"
 						>
 							<motion.img
+								onMouseEnter={mouseEnterHandler}
+								onMouseLeave={mouseLeaveHandler}
 								whileHover={{ scale: 1.1 }}
 								transition={transition1}
-								src={WomanImg}
+								src={ManImg}
 								alt=""
 							/>
 						</motion.div>

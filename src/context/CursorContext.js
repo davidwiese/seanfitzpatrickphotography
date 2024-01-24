@@ -23,6 +23,7 @@ const CursorProvider = ({ children }) => {
 				});
 			};
 			window.addEventListener("mousemove", move);
+
 			// remove event
 			return () => {
 				window.removeEventListener("mousemove", move);
