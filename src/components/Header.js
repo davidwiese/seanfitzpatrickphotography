@@ -15,7 +15,7 @@ const Header = () => {
 				<Link
 					onMouseEnter={mouseEnterHandler}
 					onMouseLeave={mouseLeaveHandler}
-					to={"/"}
+					to={"/seanfitzpatrickphotography"}
 					className="max-w-[270px]"
 				>
 					<img src={Logo} alt="homepage" />
@@ -27,7 +27,7 @@ const Header = () => {
 					className="hidden xl:flex gap-12 font-semibold"
 				>
 					<Link
-						to={"/"}
+						to={"/seanfitzpatrickphotography"}
 						className="text-[#252626] hover:text-primary transition"
 					>
 						Home
