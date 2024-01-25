@@ -47,10 +47,7 @@ const MobileNav = () => {
 				{/* menu list */}
 				<ul className="h-full flex flex-col justify-center items-center gap-8 text-primary font-primary font-bold text-3xl">
 					<li>
-						<Link
-							onClick={() => setOpenMenu(false)}
-							to="/seanfitzpatrickphotography"
-						>
+						<Link onClick={() => setOpenMenu(false)} to="/">
 							Home
 						</Link>
 					</li>
