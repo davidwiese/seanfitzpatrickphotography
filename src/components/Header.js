@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Socials from "./Socials";
-import Logo from "../img/header/logo.svg";
+import Logo from "../img/header/logo.png";
 import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
 import { CursorContext } from "../context/CursorContext";
@@ -16,7 +16,7 @@ const Header = () => {
 					onMouseEnter={mouseEnterHandler}
 					onMouseLeave={mouseLeaveHandler}
 					to={"/"}
-					className="max-w-[200px]"
+					className="max-w-[270px]"
 				>
 					<img src={Logo} alt="homepage" />
 				</Link>
