@@ -33,13 +33,12 @@ const Portfolio = () => {
 					>
 						<h1 className="h1">Portfolio</h1>
 						<p className="mb-12 max-w-sm">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
-							<b>Nesciunt velit</b> similique eos, inventore officia nulla
-							ducimus odit.
+							Discover the <b>beauty and diversity</b> of Los Angeles through my
+							lens. My collection showcases the colorful tapestry of life, from
+							serene individual portraits to the pulsing energy of concerts.
 							<br />
-							<br />
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-							eius, perferendis maiores suscipit laudantium alias!
+							<br />I invite you to browse and immerse yourself in the
+							captivating images that represent my passion for photography.
 						</p>
 						<Link to={"/contact"} className="btn mb-[30px] mx-auto lg:mx-0">
 							HIRE ME

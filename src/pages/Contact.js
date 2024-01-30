@@ -33,8 +33,7 @@ const Contact = () => {
 					>
 						<h1 className="h1">Contact Me</h1>
 						<p className="mb-12">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Consectetur, provident?
+							For inquiries and booking, please submit the form below.
 						</p>
 						{/* form */}
 						<form className="flex flex-col gap-y-4" action="">

@@ -37,13 +37,12 @@ const About = () => {
 					>
 						<h1 className="h1">About Me</h1>
 						<p className="mb-12 max-w-sm">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
-							<b>Nesciunt velit</b> similique eos, inventore officia nulla
-							ducimus odit.
+							I'm a Los Angeles based photographer, focused primarily on{" "}
+							<b>portraits, concerts, and events</b>.
 							<br />
 							<br />
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-							eius, perferendis maiores suscipit laudantium alias!
+							My goal is blending artistry with a candid style to capture the
+							unforgettable moments and true spirit of each person.
 						</p>
 						<Link to={"/portfolio"} className="btn">
 							VIEW MY WORK
