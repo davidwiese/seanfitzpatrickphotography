@@ -14,6 +14,7 @@ const Portfolio = () => {
 			exit={{ opacity: 0, y: "100%" }}
 			transition={transition1}
 			className="section"
+			style={{ overflowY: "auto", maxHeight: "100vh" }}
 		>
 			<div className="container mx-auto h-full relative">
 				<div className="flex flex-col lg:flex-row h-full items-center justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8">
@@ -44,8 +45,7 @@ const Portfolio = () => {
 					<div
 						onMouseEnter={mouseEnterHandler}
 						onMouseLeave={mouseLeaveHandler}
-						className="grid grid-cols-2 lg:gap-2 gap-1 overflow-y-auto"
-						style={{ maxHeight: "calc(100vh - 240px)" }}
+						className="grid grid-cols-2 lg:gap-2 gap-1"
 					>
 						{/* image */}
 						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
