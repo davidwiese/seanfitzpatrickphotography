@@ -28,7 +28,7 @@ const Home = () => {
 						onMouseLeave={mouseLeaveHandler}
 						className="w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start"
 					>
-						<h1 className="h1">
+						<h1 className="h1 pl-2 lg:pl-0">
 							Photographer <br />
 							Portraits & Events
 						</h1>
@@ -46,7 +46,7 @@ const Home = () => {
 							animate={{ scale: 1 }}
 							exit={{ scale: 0 }}
 							transition={transition1}
-							className="relative lg:-right-40 overflow-hidden"
+							className="relative lg:-right-40 overflow-hidden bottom-16"
 						>
 							<motion.img
 								onMouseEnter={mouseEnterHandler}
