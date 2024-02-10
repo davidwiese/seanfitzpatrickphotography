@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
 import { CursorContext } from "../context/CursorContext";
+import BouncingArrow from "../components/BouncingArrow";
 
 const Portfolio = () => {
 	const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -41,6 +42,9 @@ const Portfolio = () => {
 							HIRE ME
 						</Link>
 					</motion.div>
+					<div className="block md:hidden">
+						<BouncingArrow />
+					</div>
 					{/* image grid */}
 					<div
 						onMouseEnter={mouseEnterHandler}
