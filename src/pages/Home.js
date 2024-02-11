@@ -46,7 +46,7 @@ const Home = () => {
 							animate={{ scale: 1 }}
 							exit={{ scale: 0 }}
 							transition={transition1}
-							className="relative lg:-right-40 overflow-hidden bottom-16"
+							className="relative lg:-right-40 bottom-16"
 						>
 							<motion.img
 								onMouseEnter={mouseEnterHandler}
