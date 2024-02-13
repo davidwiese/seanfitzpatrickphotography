@@ -30,7 +30,7 @@ const Home = () => {
 					>
 						<h1 className="h1 pl-2 lg:pl-0">
 							Photographer <br />
-							Portraits & Events
+							Portraits & Concerts
 						</h1>
 						<p className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12">
 							Los Angeles, CA

@@ -38,7 +38,7 @@ const About = () => {
 						<h1 className="h1">About Me</h1>
 						<p className="mb-12 max-w-sm">
 							I'm a Los Angeles based photographer, focused primarily on{" "}
-							<b>portraits, concerts, and events</b>.
+							<b>portraits and concerts</b>.
 							<br />
 							<br />
 							My goal is blending artistry with a candid style to capture the
