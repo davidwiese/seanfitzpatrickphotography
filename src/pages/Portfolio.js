@@ -1,20 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
-import PhotoAlbum from "react-photo-album";
-import Lightbox from "yet-another-react-lightbox";
-import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/styles.css";
 
-import photos from "../photos";
 import BouncingArrow from "../components/BouncingArrow";
 
 const Portfolio = () => {
-	const [index, setIndex] = useState(-1);
-
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}
@@ -57,7 +48,7 @@ const Portfolio = () => {
 	);
 };
 
-/*  <div className="grid grid-cols-2 lg:gap-2 gap-1 pb-8">
+/* <div className="grid grid-cols-2 lg:gap-2 gap-1 pb-8">
 						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
 							<img
 								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
