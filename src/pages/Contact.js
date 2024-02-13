@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ManImg from "../img/contact/mancropped.png";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";

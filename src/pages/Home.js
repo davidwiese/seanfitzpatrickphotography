@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ManImg from "../img/home/man.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

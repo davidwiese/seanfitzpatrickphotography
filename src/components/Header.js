@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import Socials from "./Socials";
 import Logo from "../img/header/logo.png";
 import MobileNav from "./MobileNav";
