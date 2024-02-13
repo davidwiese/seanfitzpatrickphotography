@@ -42,8 +42,13 @@ const Portfolio = () => {
 						<BouncingArrow />
 					</div>
 					{/* image grid */}
-					<div className="grid grid-cols-2 lg:gap-2 gap-1 pb-8">
-						{/* image */}
+				</div>
+			</div>
+		</motion.section>
+	);
+};
+
+/* <div className="grid grid-cols-2 lg:gap-2 gap-1 pb-8">
 						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
 							<img
 								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
@@ -100,11 +105,6 @@ const Portfolio = () => {
 								alt=""
 							/>
 						</div>
-					</div>
-				</div>
-			</div>
-		</motion.section>
-	);
-};
+					</div> */
 
 export default Portfolio;
