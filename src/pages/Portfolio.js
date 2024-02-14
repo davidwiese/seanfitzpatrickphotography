@@ -9,7 +9,6 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
-import BouncingArrow from "../components/BouncingArrow";
 
 import photos from "../photos";
 
@@ -48,9 +47,7 @@ const Portfolio = () => {
 							HIRE ME
 						</Link>
 					</motion.div>
-					<div className="block md:hidden">
-						<BouncingArrow />
-					</div>
+					<div className="block md:hidden"></div>
 					{/* image grid */}
 					<div className="flex-1">
 						<PhotoAlbum
