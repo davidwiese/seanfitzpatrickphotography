@@ -1,26 +1,11 @@
-import React, { useState } from "react";
-import PhotoAlbum from "react-photo-album";
-import Lightbox from "yet-another-react-lightbox";
+import React from "react";
 import "yet-another-react-lightbox/styles.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
-
-import photos from "../photos";
 import BouncingArrow from "../components/BouncingArrow";
 
 const Portfolio = () => {
-	const [lightboxOpen, setLightboxOpen] = useState(false);
-	const [selectedIndex, setSelectedIndex] = useState(0);
-
-	console.log("Loaded photos array:", photos);
-
-	const openLightbox = (index) => {
-		console.log("Opening lightbox at index:", index);
-		setSelectedIndex(index);
-		setLightboxOpen(true);
-	};
-
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}
