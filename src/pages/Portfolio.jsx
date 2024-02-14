@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import photos from "../photos";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,6 +14,8 @@ import { transition1 } from "../transitions";
 import BouncingArrow from "../components/BouncingArrow";
 
 const Portfolio = () => {
+	const [index, setIndex] = useState(-1);
+
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}
@@ -45,7 +54,22 @@ const Portfolio = () => {
 					{/* image grid */}
 				</div>
 			</div>
-			<PhotoAlbum photos={photos} layout="rows" />
+			<PhotoAlbum
+				photos={photos}
+				layout="rows"
+				targetRowHeight={150}
+				onClick={({ index }) => setIndex(index)}
+				spacing={5}
+			/>
+
+			<Lightbox
+				slides={photos}
+				open={index >= 0}
+				index={index}
+				close={() => setIndex(-1)}
+				// enable optional lightbox plugins
+				plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+			/>
 		</motion.section>
 	);
 };
