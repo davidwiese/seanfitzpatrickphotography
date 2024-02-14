@@ -57,7 +57,8 @@ const Portfolio = () => {
 			<PhotoAlbum
 				photos={photos}
 				layout="rows"
-				targetRowHeight={140}
+				targetRowHeight={150}
+				spacing={5}
 				onClick={({ index }) => setIndex(index)}
 			/>
 
