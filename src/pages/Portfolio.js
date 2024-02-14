@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
 
+import photos from "../photos";
 import BouncingArrow from "../components/BouncingArrow";
 
 const Portfolio = () => {
+	const [lightboxOpen, setLightboxOpen] = useState(false);
+	const [selectedIndex, setSelectedIndex] = useState(0);
+
+	console.log("Loaded photos array:", photos);
+
+	const openLightbox = (index) => {
+		console.log("Opening lightbox at index:", index);
+		setSelectedIndex(index);
+		setLightboxOpen(true);
+	};
+
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}
@@ -47,64 +62,5 @@ const Portfolio = () => {
 		</motion.section>
 	);
 };
-
-/* <div className="grid grid-cols-2 lg:gap-2 gap-1 pb-8">
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/fb0hyutalzurpc8uwl0t"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/bc81avhtnaxauywcbnwj"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/muw7asqs2me40a1wsaiy"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/h8dxlolsknrt8js8givo"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/p6q4dpxifuoiyniiqiss"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/hwn22u6d8mzf76w6504t"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/s9v5calyf4lu4tv81gg2"
-								alt=""
-							/>
-						</div>
-						<div className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-							<img
-								className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-								src="https://res.cloudinary.com/dqztlsan0/image/upload/f_auto,q_auto/v1/seany%20cropped/spqpwtpxxcpwwjwledij"
-								alt=""
-							/>
-						</div>
-					</div> */
 
 export default Portfolio;
