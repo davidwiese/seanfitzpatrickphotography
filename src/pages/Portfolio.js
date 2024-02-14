@@ -32,7 +32,7 @@ const Portfolio = () => {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: "-80%" }}
 						transition={transition1}
-						className="flex-1"
+						className="flex-1 w-full"
 					>
 						<h1 className="h1">Portfolio</h1>
 						<p className="mb-12 max-w-sm">
@@ -43,13 +43,12 @@ const Portfolio = () => {
 							<br />I invite you to browse and immerse yourself in the
 							captivating images that represent my passion for photography.
 						</p>
-						<Link to={"/contact"} className="btn mb-[30px] mx-auto lg:mx-0">
+						<Link to={"/contact"} className="btn mb-[30px] mx-2 lg:mx-0">
 							HIRE ME
 						</Link>
 					</motion.div>
-					<div className="block md:hidden"></div>
 					{/* image grid */}
-					<div className="flex-1">
+					<div className="flex-1 w-full">
 						<PhotoAlbum
 							photos={photos}
 							layout="rows"
