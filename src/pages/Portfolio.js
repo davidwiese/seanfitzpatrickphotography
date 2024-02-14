@@ -33,7 +33,7 @@ const Portfolio = () => {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: "-80%" }}
 						transition={transition1}
-						className="flex flex-col lg:items-start"
+						className="flex-1"
 					>
 						<h1 className="h1">Portfolio</h1>
 						<p className="mb-12 max-w-sm">
@@ -52,24 +52,26 @@ const Portfolio = () => {
 						<BouncingArrow />
 					</div>
 					{/* image grid */}
+					<div className="flex-1">
+						<PhotoAlbum
+							photos={photos}
+							layout="rows"
+							targetRowHeight={150}
+							spacing={5}
+							onClick={({ index }) => setIndex(index)}
+						/>
+
+						<Lightbox
+							slides={photos}
+							open={index >= 0}
+							index={index}
+							close={() => setIndex(-1)}
+							// enable optional lightbox plugins
+							plugins={[Fullscreen, Thumbnails, Zoom]}
+						/>
+					</div>
 				</div>
 			</div>
-			<PhotoAlbum
-				photos={photos}
-				layout="rows"
-				targetRowHeight={150}
-				spacing={5}
-				onClick={({ index }) => setIndex(index)}
-			/>
-
-			<Lightbox
-				slides={photos}
-				open={index >= 0}
-				index={index}
-				close={() => setIndex(-1)}
-				// enable optional lightbox plugins
-				plugins={[Fullscreen, Thumbnails, Zoom]}
-			/>
 		</motion.section>
 	);
 };
