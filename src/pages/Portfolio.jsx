@@ -1,5 +1,6 @@
 import React from "react";
-import "yet-another-react-lightbox/styles.css";
+import PhotoAlbum from "react-photo-album";
+import photos from "../photos";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
@@ -44,6 +45,7 @@ const Portfolio = () => {
 					{/* image grid */}
 				</div>
 			</div>
+			<PhotoAlbum photos={photos} layout="rows" />
 		</motion.section>
 	);
 };
