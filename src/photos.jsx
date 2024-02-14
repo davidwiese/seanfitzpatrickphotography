@@ -1,9 +1,9 @@
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
-const unsplashLink = (id, width, height) =>
+const cloudinaryLink = (id, width, height) =>
 	`https://res.cloudinary.com/dqztlsan0/image/upload/w_${width},h_${height}/v1707852220/seanypics/${id}`;
 
-const unsplashPhotos = [
+const cloudinaryPhotos = [
 	{ id: "ylls3nuqob3wl9o4hexb.jpg", width: 1080, height: 1620 },
 	{ id: "c8wgpeh4c9z5y6hcdsgg.jpg", width: 1080, height: 864 },
 	// { id: "RkBTPqPEGDo", width: 1080, height: 720 },
@@ -27,14 +27,14 @@ const unsplashPhotos = [
 	// { id: "xKhtkhc9HbQ", width: 1080, height: 1440 },
 ];
 
-const photos = unsplashPhotos.map((photo) => ({
-	src: unsplashLink(photo.id, photo.width, photo.height),
+const photos = cloudinaryPhotos.map((photo) => ({
+	src: cloudinaryLink(photo.id, photo.width, photo.height),
 	width: photo.width,
 	height: photo.height,
 	srcSet: breakpoints.map((breakpoint) => {
 		const height = Math.round((photo.height / photo.width) * breakpoint);
 		return {
-			src: unsplashLink(photo.id, breakpoint, height),
+			src: cloudinaryLink(photo.id, breakpoint, height),
 			width: breakpoint,
 			height,
 		};
