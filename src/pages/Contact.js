@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import ManImg from "../img/contact/mancropped.png";
 import { motion } from "framer-motion";
@@ -6,6 +6,16 @@ import { transition1 } from "../transitions";
 
 const Contact = () => {
 	const [state, handleSubmit] = useForm("mgegkzag");
+	// State to trigger re-render
+	const [formKey, setFormKey] = useState(Date.now());
+	// Function to reset the form by changing its key
+	const resetForm = () => setFormKey(Date.now());
+	// Effect to reset form on successful submission
+	useEffect(() => {
+		if (state.succeeded) {
+			resetForm();
+		}
+	}, [state.succeeded]);
 
 	return (
 		<motion.section
@@ -32,7 +42,11 @@ const Contact = () => {
 							For inquiries and booking, please submit the form below.
 						</p>
 						{/* form */}
-						<form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
+						<form
+							className="flex flex-col gap-y-4"
+							key={formKey}
+							onSubmit={handleSubmit}
+						>
 							<div className="flex gap-x-10">
 								<input
 									className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
