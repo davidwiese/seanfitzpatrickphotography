@@ -1,9 +1,12 @@
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import ManImg from "../img/contact/mancropped.png";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
 
 const Contact = () => {
+	const [state, handleSubmit] = useForm("mgegkzag");
+
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: "100%" }}
@@ -29,28 +32,67 @@ const Contact = () => {
 							For inquiries and booking, please submit the form below.
 						</p>
 						{/* form */}
-						<form className="flex flex-col gap-y-4" action="">
+						<form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
 							<div className="flex gap-x-10">
 								<input
 									className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
 									type="text"
 									placeholder="Your name"
+									id="name"
+									name="name"
+									aria-label="Your name"
+									required
+								/>
+								<ValidationError
+									prefix="Name"
+									field="name"
+									errors={state.errors}
+									className="text-red-500"
 								/>
 								<input
 									className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
-									type="text"
+									type="email"
 									placeholder="Your email"
+									id="email"
+									name="email"
+									aria-label="Your email"
+									required
+								/>
+								<ValidationError
+									prefix="Email"
+									field="email"
+									errors={state.errors}
+									className="text-red-500"
 								/>
 							</div>
 							<input
 								className="outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
 								type="text"
 								placeholder="Your message"
+								id="message"
+								name="message"
+								aria-label="Your message"
+								required
 							/>
-							<button className="btn mb-[30px] mx-auto lg:mx-0 self-start">
+							<ValidationError
+								prefix="Message"
+								field="message"
+								errors={state.errors}
+								className="text-red-500"
+							/>
+							<button
+								className="btn mb-[30px] mx-auto lg:mx-0 self-start"
+								type="submit"
+								disabled={state.submitting}
+							>
 								Submit
 							</button>
 						</form>
+						{state.succeeded && (
+							<p className="text-green-500">
+								Thanks for your message - I'll get back to you soon!
+							</p>
+						)}
 					</div>
 					{/* image */}
 					<motion.div
